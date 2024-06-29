@@ -1,10 +1,9 @@
 <template>
-  <div>foot组件</div>
+  <div>我是主页</div>
 </template>
 
 <script>
 export default {
-    name:"Foolter"
 
 }
 </script>

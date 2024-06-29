@@ -1,19 +1,21 @@
 <template>
   <div>
-    <Header></Header>
-    <footer></footer>
     我是根组件
+    <Header></Header>
+    <router-view></router-view>
+    <Foolter></Foolter>
+    
   </div>
 </template>
 
 <script>
-import Header from './components/header'
-import footer from './components/footer'
+import Header from './components/header/index.vue'
+import Foolter from './components/footer/index.vue'
 export default {
   name: 'App',
   components:{
     Header,
-    footer
+    Foolter,
   }
 }
 </script>

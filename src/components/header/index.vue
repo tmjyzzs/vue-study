@@ -7,7 +7,7 @@
           <div class="loginList">
             <p>尚品汇欢迎您！</p>
             <!-- 没有登录：显示登录与注册 -->
-            <p v-if="!$store.state.user.nickName">
+            <p >
               <span>请</span>
               <!-- <a href="###">登录</a> -->
               <!-- 
@@ -18,10 +18,6 @@
               <router-link class="register" to="/register">注册</router-link>
             </p>
             <!-- 如果登录显示的是用户名字与退出登录 -->
-            <p v-else>
-              <a>{{ $store.state.user.nickName }}</a>
-              <a class="register" @click="logout">退出登录</a>
-            </p>
           </div>
           <div class="typeList">
             <router-link to="/center">我的订单</router-link>
@@ -44,9 +40,9 @@
         </h1>
         <div class="searchArea">
           <form action="###" class="searchForm">
-            <input type="text" id="autocomplete" class="input-error input-xxlarge" v-model="keyword" />
+            <input type="text" id="autocomplete" class="input-error input-xxlarge" />
             <!-- 编程式导航:因为有业务 -->
-            <button class="sui-btn btn-xlarge btn-danger" type="button" @click="goSearch">
+            <button class="sui-btn btn-xlarge btn-danger" type="button" >
               搜索
             </button>
           </form>
