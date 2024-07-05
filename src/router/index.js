@@ -11,23 +11,26 @@ export default new Router({
   routes: [
     {
       path: '/home',
-      component: Home
+      component: Home,
+      meta: { show: true }
     },
     {
       path: '/login',
       component: Login
     },
     {
-      path: '/search',
-      component: Search
+      path: '/search/:keyWord',
+      component: Search,
+      meta: { show: true },
+      name:"search"
     },
     {
       path: '/register',
       component: Register
     },
     {
-      path:"*",
-      redirect:"/home"
+      path: "*",
+      redirect: "/home"
     }
   ]
 })

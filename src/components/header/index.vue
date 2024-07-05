@@ -7,7 +7,7 @@
           <div class="loginList">
             <p>尚品汇欢迎您！</p>
             <!-- 没有登录：显示登录与注册 -->
-            <p >
+            <p>
               <span>请</span>
               <!-- <a href="###">登录</a> -->
               <!-- 
@@ -40,9 +40,9 @@
         </h1>
         <div class="searchArea">
           <form action="###" class="searchForm">
-            <input type="text" id="autocomplete" class="input-error input-xxlarge" />
+            <input type="text" id="autocomplete" class="input-error input-xxlarge" v-model="keyWord" />
             <!-- 编程式导航:因为有业务 -->
-            <button class="sui-btn btn-xlarge btn-danger" type="button" >
+            <button class="sui-btn btn-xlarge btn-danger" type="button" @click="goSearch">
               搜索
             </button>
           </form>
@@ -56,6 +56,26 @@
 export default {
 
   name: "Header",
+  data() {
+    return {
+      keyWord: ''
+    }
+  },
+  methods: {
+    goSearch() {
+      console.log("vue", this);
+      // 1.路径凭借传递
+      // this.$router.push("/search/"+this.keyWord+'?k='+this.keyWord)
+      // 2.对象传参  -- 常用
+      this.$router.push({
+        name: 'search', params: {
+          keyWord: this.keyWord
+        }, query: {
+          k: this.keyWord
+        }
+      })
+    }
+  }
 
 }
 </script>
