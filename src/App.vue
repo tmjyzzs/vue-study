@@ -1,6 +1,5 @@
 <template>
   <div>
-    我是根组件
     <Header></Header>
     <router-view></router-view>
     <Foolter></Foolter>
