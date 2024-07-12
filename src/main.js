@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'reset.css'
+// import 'reset.css'
+import "./styles/reset.css"
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 Vue.config.productionTip = false

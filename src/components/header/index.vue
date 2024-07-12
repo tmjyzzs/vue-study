@@ -22,19 +22,23 @@
             <a href="">我的购物成为</a>
             <a href="">我的商品</a>
             <a href="">合作招商</a>
-
           </div>
-
         </div>
 
-        <!-- 分类 -->
-        <div></div>
       </div>
-
-      <!-- logo -->
-      <div></div>
-      <!-- 搜索 -->
-      <div></div>
+      <!-- 搜索区域 -->
+      <div class="search clearfix">
+        <!-- logo -->
+        <div class="logoArea">
+          <img src="./images/logo.png" alt="">
+        </div>
+        <div class="searchArea">
+          <input type="text">
+          <button>搜索</button>
+        </div>
+      </div>
+      <!-- 内容显示区域 -->
+      <div class="content"></div>
     </header>
   </div>
 </template>
@@ -68,6 +72,8 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import "../../styles/index.less";
+
 .header {
   &>.top {
     background: #e4e4e4;
@@ -106,6 +112,49 @@ export default {
         }
       }
     }
+  }
+
+  &>.search {
+    width: 750px;
+    margin: 0 auto;
+
+
+    .logoArea {
+      float: left;
+
+      img {
+        width: 175px;
+        margin: 25px 45px;
+      }
+    }
+
+    .searchArea {
+      float: right;
+      margin-top: 35px;
+
+      input {
+        box-sizing: border-box;
+        float: left;
+        border: 1px solid #ea4a36;
+        width: 400px;
+        height: 30px;
+      }
+
+      button {
+        float: left;
+        width: 70px;
+        height: 30px;
+        background-color: #ea4a36;
+        border-style: none;
+      }
+    }
+  }
+
+  &>.content {
+    width: 750px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #ea4a36;
   }
 }
 </style>
