@@ -33,8 +33,8 @@
           <img src="./images/logo.png" alt="">
         </div>
         <div class="searchArea">
-          <input type="text">
-          <button>搜索</button>
+          <input type="text" v-model="keyWord">
+          <button @click="goSearch">搜索</button>
         </div>
       </div>
       <!-- 内容显示区域 -->
