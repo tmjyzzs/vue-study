@@ -7,6 +7,11 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 Vue.config.productionTip = false
 
+//测试
+import { testReqtest } from '@/api/index.js'
+
+testReqtest()
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
